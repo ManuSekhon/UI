@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Table: UI Training</title>
+
+  <style>
+
+    .container {
+      border: 1px solid black;
+      background-color: rgb(237, 241, 243);
+      padding: 5px 5px 5px 5px;
+      margin: 0 auto;
+      width: 500px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    th {
+      vertical-align: top;
+      color: darkblue;
+      background-color: rgb(209, 234, 243);
+    }
+
+    td {
+      text-align: right;
+      vertical-align: bottom;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h4>Energy Expenditures for Each Region</h4>
+    <h4>(millions of dollars)</h4>
+
+    <table>
+      <tr>
+        <th rowspan="4" colspan="2"></th>
+        <th colspan="2">Type</th>
+      </tr>
+      <tr>
+        <th>Residential Customers</th>
+        <th>Business Customers</th>
+      </tr>
+      <tr>
+        <th>Expenditures</th>
+        <th>Expenditures</th>
+      </tr>
+      <tr>
+        <th>Sum</th>
+        <th>Sum</th>
+      </tr>
+      <tr>
+        <th>Region</th>
+        <th>Division</th>
+        <td rowspan="2">$7477</td>
+        <td rowspan="2">$1010</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Northeast</th>
+        <th>New England</th>
+      </tr>
+      <tr>
+        <th>Middle Atlantic</th>
+        <td>$12000</td>
+        <td>$13000</td>
+      </tr>
+      <tr>
+        <th rowspan="2">West</th>
+        <th>Mountain</th>
+        <td>$4000</td>
+        <td>$5000</td>
+      </tr>
+      <tr>
+        <th>Pacific</th>
+        <td>$14000</td>
+        <td>$15000</td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
