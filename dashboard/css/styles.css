@@ -7,7 +7,7 @@
 
 .container {
   display: flex;
-  height: 100vh;
+  height: 100%;
   background-color: #f8f8fa;
 }
 
@@ -66,6 +66,7 @@
   flex-grow: 1;
 }
 
+/* Topbar styling */
 .content .topbar {
   height: 68px;
   background-color: #edecf1;
@@ -114,6 +115,7 @@
   height: 37px;
   width: 37px;
   border-radius: 50%;
+  margin-right: 7px;
 }
 
 .topbar .notification {
@@ -166,8 +168,126 @@
   margin-right: 10px;
 }
 
-.content .main-content {
-  margin-right: 35px;
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #656a70;;
+}
+
+.main-content section {
+  border-color: transparent;
+  border-style: solid;
+  background-clip: padding-box;
+}
+
+.title {
+  flex-basis: 50%;
+  border-width: 24px 15px 17px 30px;
+}
+
+.title h4 {
+  color: #656a70;
+}
+
+.title p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.settings-btn {
+  flex-basis: 50%;
+  border-width: 24px 30px 17px 15px;
+  text-align: end;
+  margin: auto 0;
+}
+
+.settings-btn button {
+  border: none;
+  height: 34px;
+  width: 100px;
+  background-color: #6270d1;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.settings-btn button span { 
+  padding-left: 5px;
+}
+
+.stat-group {
+  flex-basis: 100%;
+  border-width: 17px 30px 15px 30px;
+}
+
+.stat-card {
+  display: inline-block;
+  width: 22.7%;
+  height: 153px;
+  background-color: #6270d1;
+  border-radius: 5px;
+}
+
+.stat-card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.transaction {
+  flex-basis: 66%;
+  border-width: 17px 15px 20px 30px;
+  background-color: white;
+  padding: 20px;
+}
+
+.people {
+  margin-top: 25px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.people th, .people td {
+  border: 1px solid #e6e6e6;
+  border-collapse: collapse;
+  border-left: none;
+  border-right: none;
+  text-align: left; 
+  padding: 16px 0 16px 0;
+  font-size: 15px;
+}
+
+tr.active {
+  background-color: #f8f9fb;
+}
+
+thead th {
+  border-bottom-width: 2px !important;
+}
+
+.people #image {
+  width: 60px;
+}
+
+.people img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.btn-edit {
+  font-size: 13px;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #666ed9;
+}
+
+.chat-box {
+  flex-basis: 34%;
+  border-width: 17px 30px 20px 15px;
+  background-color: white;
+  padding: 20px;
 }
 
 /* Badge design */
@@ -187,4 +307,27 @@
 }
 .color-fa4564 {
   background-color: #fa4564;
+}
+
+/* Status codes */
+.status-d {
+  font-size: 11px !important;
+  color: white;
+  background-color: #25a79b;
+  border-radius: 5px;
+  padding: 1px;
+}
+.status-p {
+  font-size: 11px !important;
+  color: white;
+  border-radius: 5px;
+  padding: 1px;
+  background-color: #f7b11d;
+}
+.status-c {
+  font-size: 11px !important;
+  color: white;
+  border-radius: 5px;
+  padding: 1px;
+  background-color: #ef4761;
 }
