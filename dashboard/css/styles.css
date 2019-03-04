@@ -13,7 +13,7 @@
 
 /* Sidebar styling */
 .sidebar {
-  width: 238px;
+  width: 248px;
   background-color: #343549;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .content {
-  flex-grow: 1;
+  flex: 1;
 }
 
 /* Topbar styling */
@@ -219,18 +219,72 @@
 .stat-group {
   flex-basis: 100%;
   border-width: 17px 30px 15px 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .stat-card {
-  display: inline-block;
-  width: 22.7%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "logo name percent"
+                       "logo value value"
+                       "time-s time-s nxt";
   height: 153px;
+  width: 260px;
   background-color: #6270d1;
   border-radius: 5px;
+  padding: 10px 0 20px 20px;
 }
 
-.stat-card:not(:last-child) {
-  margin-right: 30px;
+.stat-card .logo {
+  grid-area: logo;
+  align-self: center;
+  font-size: 30px;
+  color: white;
+}
+.stat-card .logo i {
+  padding: 15px;
+  background-color: #7c83db;
+}
+
+.stat-card .name {
+  grid-area: name;
+  grid-column-end: span 2;
+  color: #b6bfe6;
+  font-weight: bold;
+  align-self: center;
+}
+
+.stat-card .percent {
+  grid-area: percent;
+  align-self: center;
+  justify-self: center;
+  color: white;
+}
+
+.stat-card .value {
+  grid-area: value;
+  color: white;
+  font-size: 25px;
+}
+.stat-card .value i {
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+.stat-card .time-s {
+  grid-area: time-s;
+  align-self: flex-end;
+  color: #b6bfe6;
+}
+
+.stat-card .nxt {
+  grid-area: nxt;
+  justify-self: end;
+  align-self: flex-end;
+  padding-right: 20px;
+  color: #b6bfe6;
 }
 
 .transaction {
@@ -238,6 +292,7 @@
   border-width: 17px 15px 20px 30px;
   background-color: white;
   padding: 20px;
+  border-radius: 5px;
 }
 
 .people {
@@ -254,6 +309,10 @@
   text-align: left; 
   padding: 16px 0 16px 0;
   font-size: 15px;
+}
+
+.people tbody:last-child * {
+  border-bottom: none;
 }
 
 tr.active {
@@ -288,6 +347,37 @@ thead th {
   border-width: 17px 30px 20px 15px;
   background-color: white;
   padding: 20px;
+  position: relative;
+}
+
+.mesg-box {
+  position: absolute;
+  bottom: 20px;
+  width: 89%;
+
+}
+
+.mesg-box input {
+  height: 36px;
+  width: 75%;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.mesg-box button {
+  font-size: 14px;
+  color: white;
+  background-color: #2da299;
+  border: none;
+  padding: 9px;
+  border-radius: 3px;
+  float: right;
+}
+
+.chat-box .received {
+  text-align: end;
 }
 
 /* Badge design */
