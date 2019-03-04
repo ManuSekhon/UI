@@ -4,6 +4,7 @@
 
 <head>
   <title>Dashboard: UI Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="css/styles.css" rel="stylesheet">
   <!-- Font awesome icons -->
@@ -13,238 +14,232 @@
 
 </head>
 
-<body>
-  <div class="container">
-    <!-- Sidebar -->
-    <nav class="sidebar">
-      <section id="logo">GeekyAnts</section>
-      <section id="main-text">MAIN</section>
-      <ul class="menu">
+<body class="container">
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <section id="logo">GeekyAnts</section>
+    <section id="main-text">MAIN</section>
+    <ul class="menu">
+      <a href="#">
         <li class="active">
-          <a href="#">
-            <i class="fas fa-home"></i>
-            <span class="text">Dashboard</span>
-            <span class="badge badge-sb color-6573d4">2</span>
-          </a>
+          <i class="fas fa-home"></i>
+          <span class="text">Dashboard</span>
+          <span class="badge badge-sb color-6573d4">2</span>
         </li>
+      </a>
+      <a href="#">
         <li>
-          <a href="#">
-            <i class="fas fa-calendar-week"></i>
-            <span class="text">Calender</span>
-          </a>
+          <i class="fas fa-calendar-week"></i>
+          <span class="text">Calender</span>
         </li>
+      </a>
+      <a href="#">
         <li>
-          <a href="#">
-            <i class="fas fa-envelope"></i>
-            <span class="text">Email</span>
-            <i class="fas fa-angle-right arrow"></i>
-          </a>
+          <i class="fas fa-envelope"></i>
+          <span class="text">Email</span>
+          <i class="fas fa-angle-right arrow"></i>
         </li>
+      </a>
+      <a href="#">
         <li>
-          <a href="#">
-            <i class="fas fa-cube"></i>
-            <span class="text">UI Elements</span>
-            <i class="fas fa-angle-right arrow"></i>
-          </a>
+          <i class="fas fa-cube"></i>
+          <span class="text">UI Elements</span>
+          <i class="fas fa-angle-right arrow"></i>
         </li>
+      </a>
+      <a href="#">
         <li>
-          <a href="#">
-            <i class="fab fa-wpforms"></i>
-            <span class="text">Forms</span>
-            <span class="badge badge-sb color-6573d4">9</span>
-          </a>
+          <i class="fab fa-wpforms"></i>
+          <span class="text">Forms</span>
+          <span class="badge badge-sb color-6573d4">9</span>
         </li>
+      </a>
+      <a href="#">
         <li>
-          <a href="#">
-            <i class="fas fa-chart-pie"></i>
-            <span class="text">Charts</span>
-            <i class="fas fa-angle-right arrow"></i>
-          </a>
+          <i class="fas fa-chart-pie"></i>
+          <span class="text">Charts</span>
+          <i class="fas fa-angle-right arrow"></i>
         </li>
+      </a>
+      <a href="#">
         <li>
-          <a href="#">
-            <i class="fas fa-table"></i>
-            <span class="text">Tables</span>
-            <i class="fas fa-angle-right arrow"></i>
-          </a>
+          <i class="fas fa-table"></i>
+          <span class="text">Tables</span>
+          <i class="fas fa-angle-right arrow"></i>
         </li>
+      </a>
+      <a href="#">
         <li>
-          <a href="#">
-            <i class="fas fa-smile-beam"></i>
-            <span class="text">Icons</span>
-            <i class="fas fa-angle-right arrow"></i>
-          </a>
+          <i class="fas fa-smile-beam"></i>
+          <span class="text">Icons</span>
+          <i class="fas fa-angle-right arrow"></i>
         </li>
+      </a>
+      <a href="#">
         <li>
-          <a href="#">
-            <i class="fas fa-map-marker-alt"></i>
-            <span class="text">Maps</span>
-            <span class="badge badge-sb color-fa4564">2</span>
-          </a>
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="text">Maps</span>
+          <span class="badge badge-sb color-fa4564">2</span>
         </li>
-      </ul>
-    </nav>
+      </a>
+    </ul>
+  </nav>
 
-    <div class="content">
-      <!-- Topbar -->
-      <header class="topbar">
-        <div class="left">
-          <button class="menu fas fa-bars"></button>
-          <button class="create">Create<i class="fas fa-caret-down"></i></button>
+  <div class="content">
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="menu fas fa-bars"></button>
+      <button class="create">Create<i class="fas fa-caret-down"></i></button>
+      <section class="search">
+        <input type="text" placeholder="Search..">
+        <i class="fas fa-search"></i>
+      </section>
+      <section class="lang-drop-down">
+        <i class="fas fa-flag"></i><span>English</span><i class="fas fa-caret-down"></i>
+      </section>
+      <section class="screenshot-icon">
+        <i class="far fa-square screenshot-icon"></i>
+      </section>
+      <section class="notification">
+        <i class="far fa-bell"></i>
+        <span class="badge badge-tb color-fa4564">3</span>
+      </section>
+      <section class="profile">
+        <img src="./images/profile.png" alt="admin">
+      </section>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Title -->
+      <section class="title">
+        <h4>Dashboard</h4>
+        <p>Welcome to Veltrix Dashboard</p>
+      </section>
+      <!-- Settings button -->
+      <section class="settings-btn">
+        <button class="fas fa-cog" type="button"><span>Settings</span></button>
+      </section>
+      <!-- Stat cards -->
+      <section class="stat-group">
+        <article class="stat-card">
+          <div class="logo"><i class="fas fa-atlas"></i></div>
+          <div class="name">ORDERS</div>
+          <div class="percent ribbon-green">+12%</div>
+          <div class="value">1,685<i class="fas fa-arrow-up"></i></div>
+          <div class="time-s">Since last month</div>
+          <div class="nxt"><i class="fas fa-arrow-right"></i></div>
+        </article>
+        <article class="stat-card">
+          <div class="logo"><i class="fas fa-sticky-note"></i></div>
+          <div class="name">REVENUE</div>
+          <div class="percent ribbon-red">-28%</div>
+          <div class="value">52,268<i class="fas fa-arrow-down"></i></div>
+          <div class="time-s">Since last month</div>
+          <div class="nxt"><i class="fas fa-arrow-right"></i></div>
+        </article>
+        <article class="stat-card">
+          <div class="logo"><i class="fas fa-pencil-alt"></i></div>
+          <div class="name">AVERAGE PRICE</div>
+          <div class="percent ribbon-blue">+00%</div>
+          <div class="value">15.8<i class="fas fa-arrow-up"></i></div>
+          <div class="time-s">Since last month</div>
+          <div class="nxt"><i class="fas fa-arrow-right"></i></div>
+        </article>
+        <article class="stat-card">
+          <div class="logo"><i class="fas fa-briefcase"></i></div>
+          <div class="name">PRODUCT SOFT</div>
+          <div class="percent ribbon-yellow">+84%</div>
+          <div class="value">2436<i class="fas fa-arrow-up"></i></div>
+          <div class="time-s">Since last month</div>
+          <div class="nxt"><i class="fas fa-arrow-right"></i></div>
+        </article>
+        <article class="stat-card">
+          <div class="logo"><i class="fas fa-briefcase"></i></div>
+          <div class="name">PRODUCT SOFT</div>
+          <div class="percent ribbon-yellow">+84%</div>
+          <div class="value">2436<i class="fas fa-arrow-up"></i></div>
+          <div class="time-s">Since last month</div>
+          <div class="nxt"><i class="fas fa-arrow-right"></i></div>
+        </article>
+      </section>
+      <!-- Transaction card -->
+      <section class="transaction">
+        <h4>Latest Transaction</h4>
+        <table class="people">
+          <thead>
+            <tr>
+              <th>(#) Id</th>
+              <th colspan="2">Name</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>#14256</th>
+              <td id="image"><img src="images/brad-pitt.jpeg" alt="image"></td>
+              <td>Brad Pitt</td>
+              <td>15/1/2018</td>
+              <td>$94</td>
+              <td><span class="status-d">Delivered</span></td>
+              <td><button class="btn-edit">Edit</button></td>
+            </tr>
+            <tr>
+              <th>#14257</th>
+              <td id="image"><img src="images/alexandra.jpeg" alt="image"></td>
+              <td>Alexandra</td>
+              <td>16/1/2019</td>
+              <td>$112</td>
+              <td><span class="status-p">Pending</span></td>
+              <td><button class="btn-edit">Edit</button></td>
+            </tr>
+            <tr class="active">
+              <th>#14258</th>
+              <td id="image"><img src="images/the-rock.jpeg" alt="image"></td>
+              <td>The Rock</td>
+              <td>17/1/2019</td>
+              <td>$200</td>
+              <td><span class="status-d">Delivered</span></td>
+              <td><button class="btn-edit">Edit</button></td>
+            </tr>
+            <tr>
+              <th>#14259</th>
+              <td id="image"><img src="images/emma-stone.jpeg" alt="image"></td>
+              <td>Emma Stone</td>
+              <td>18/1/2019</td>
+              <td>$300</td>
+              <td><span class="status-c">Cancel</span></td>
+              <td><button class="btn-edit">Edit</button></td>
+            </tr>
+            <tr>
+              <th>#14260</th>
+              <td id="image"><img src="images/wiz-khalifa.jpeg" alt="image"></td>
+              <td>Wiz Khalifa</td>
+              <td>19/1/2019</td>
+              <td>$412</td>
+              <td><span class="status-d">Delivered</span></td>
+              <td><button class="btn-edit">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- Chat box -->
+      <section class="chat-box">
+        <h4>Chat</h4>
+        <div class="mesg-box">
+          <input type="text" placeholder="Enter your text">
+          <button id="btn-send">Send</button>
         </div>
-        <div class="right">
-          <section class="search">
-            <input type="text" placeholder="Search..">
-            <i class="fas fa-search"></i>
-          </section>
-          <section class="lang-drop-down">
-            <i class="fas fa-flag"></i><span>English</span><i class="fas fa-caret-down"></i>
-          </section>
-          <section class="screenshot-icon">
-            <i class="far fa-square screenshot-icon"></i>
-          </section>
-          <section class="notification">
-            <i class="far fa-bell"></i>
-            <span class="badge badge-tb color-fa4564">3</span>
-          </section>
-          <section class="profile">
-            <img src="./images/profile.png" alt="admin">
-          </section>
-        </div>
-      </header>
 
-      <!-- Main content -->
-      <main class="main-content">
-        <!-- Title -->
-        <section class="title">
-          <h4>Dashboard</h4>
-          <p>Welcome to Veltrix Dashboard</p>
-        </section>
-        <!-- Settings button -->
-        <section class="settings-btn">
-          <button class="fas fa-cog" type="button"><span>Settings</span></button>
-        </section>
-        <!-- Stat cards -->
-        <section class="stat-group">
-          <article class="stat-card">
-            <div class="logo"><i class="fas fa-atlas"></i></div>
-            <div class="name">ORDERS</div>
-            <div class="percent ribbon-green">+12%</div>
-            <div class="value">1,685<i class="fas fa-arrow-up"></i></div>
-            <div class="time-s">Since last month</div>
-            <div class="nxt"><i class="fas fa-arrow-right"></i></div>
-          </article>
-          <article class="stat-card">
-            <div class="logo"><i class="fas fa-sticky-note"></i></div>
-            <div class="name">REVENUE</div>
-            <div class="percent ribbon-red">-28%</div>
-            <div class="value">52,268<i class="fas fa-arrow-down"></i></div>
-            <div class="time-s">Since last month</div>
-            <div class="nxt"><i class="fas fa-arrow-right"></i></div>
-          </article>
-          <article class="stat-card">
-            <div class="logo"><i class="fas fa-pencil-alt"></i></div>
-            <div class="name">AVERAGE PRICE</div>
-            <div class="percent ribbon-blue">+00%</div>
-            <div class="value">15.8<i class="fas fa-arrow-up"></i></div>
-            <div class="time-s">Since last month</div>
-            <div class="nxt"><i class="fas fa-arrow-right"></i></div>
-          </article>
-          <article class="stat-card">
-            <div class="logo"><i class="fas fa-briefcase"></i></div>
-            <div class="name">PRODUCT SOFT</div>
-            <div class="percent ribbon-yellow">+84%</div>
-            <div class="value">2436<i class="fas fa-arrow-up"></i></div>
-            <div class="time-s">Since last month</div>
-            <div class="nxt"><i class="fas fa-arrow-right"></i></div>
-          </article>
-          <article class="stat-card">
-            <div class="logo"><i class="fas fa-briefcase"></i></div>
-            <div class="name">PRODUCT SOFT</div>
-            <div class="percent ribbon-yellow">+84%</div>
-            <div class="value">2436<i class="fas fa-arrow-up"></i></div>
-            <div class="time-s">Since last month</div>
-            <div class="nxt"><i class="fas fa-arrow-right"></i></div>
-          </article>
-        </section>
-        <!-- Transaction card -->
-        <section class="transaction">
-          <h4>Latest Transaction</h4>
-          <table class="people">
-            <thead>
-              <tr>
-                <th>(#) Id</th>
-                <th colspan="2">Name</th>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Status</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>#14256</th>
-                <td id="image"><img src="images/brad-pitt.jpeg" alt="image"></td>
-                <td>Brad Pitt</td>
-                <td>15/1/2018</td>
-                <td>$94</td>
-                <td><span class="status-d">Delivered</span></td>
-                <td><button class="btn-edit">Edit</button></td>
-              </tr>
-              <tr>
-                <th>#14257</th>
-                <td id="image"><img src="images/alexandra.jpeg" alt="image"></td>
-                <td>Alexandra</td>
-                <td>16/1/2019</td>
-                <td>$112</td>
-                <td><span class="status-p">Pending</span></td>
-                <td><button class="btn-edit">Edit</button></td>
-              </tr>
-              <tr class="active">
-                <th>#14258</th>
-                <td id="image"><img src="images/the-rock.jpeg" alt="image"></td>
-                <td>The Rock</td>
-                <td>17/1/2019</td>
-                <td>$200</td>
-                <td><span class="status-d">Delivered</span></td>
-                <td><button class="btn-edit">Edit</button></td>
-              </tr>
-              <tr>
-                <th>#14259</th>
-                <td id="image"><img src="images/emma-stone.jpeg" alt="image"></td>
-                <td>Emma Stone</td>
-                <td>18/1/2019</td>
-                <td>$300</td>
-                <td><span class="status-c">Cancel</span></td>
-                <td><button class="btn-edit">Edit</button></td>
-              </tr>
-              <tr>
-                <th>#14260</th>
-                <td id="image"><img src="images/wiz-khalifa.jpeg" alt="image"></td>
-                <td>Wiz Khalifa</td>
-                <td>19/1/2019</td>
-                <td>$412</td>
-                <td><span class="status-d">Delivered</span></td>
-                <td><button class="btn-edit">Edit</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <!-- Chat box -->
-        <section class="chat-box">
-          <h4>Chat</h4>
-          <div class="mesg-box">
-            <input type="text" placeholder="Enter your text">
-            <button id="btn-send">Send</button>
-          </div>
-
-          <div class="sent">Hello</div>
-          <div class="received">World</div>
-          <div class="sent">Geeky</div>
-          <div class="received">Ants</div>
-        </section>
-      </main>
-    </div>
+        <div class="sent">Hello</div>
+        <div class="received">World</div>
+        <div class="sent">Geeky</div>
+        <div class="received">Ants</div>
+      </section>
+    </main>
   </div>
 </body>
 
