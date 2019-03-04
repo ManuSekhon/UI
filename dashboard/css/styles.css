@@ -66,11 +66,13 @@ button:hover {
 
 .sidebar .menu li:hover {
   background-color: #393c4f;
+  margin: 5px 0 5px 0;
+  transition: all 0.2s ease-in-out;
 } 
 
 .sidebar .menu .active {
   background-color: #393c4f;
-  color: #ebecf1;
+  color: #a7b6cb;
 }
 
 .sidebar .menu li i {
@@ -124,7 +126,12 @@ button:hover {
   color: #4f5379;
 }
 
-.topbar img {
+.topbar .lang-drop-down img {
+  height: 12px;
+  padding-right: 8px;
+}
+
+.topbar .profile img {
   height: 37px;
   width: 37px;
   border-radius: 50%;
@@ -171,6 +178,10 @@ button:hover {
   padding-left: 10px;
   border-radius: 20px;
   font-size: 13px;
+}
+
+.topbar .search input:focus {
+  border: 2px solid rgb(33, 192, 245);
 }
 
 .topbar .search i {
@@ -266,10 +277,10 @@ button:hover {
 
 .stat-card .name {
   grid-area: name;
-  grid-column-end: span 2;
   color: #b6bfe6;
   font-weight: bold;
   align-self: center;
+  font-size: 15px;
 }
 
 .stat-card .percent {
@@ -279,6 +290,12 @@ button:hover {
   height: 27px;
   line-height: 1.6;
   text-align: center;
+}
+
+.stat-card .percent span {
+  position: relative;
+  top: -28px;
+  left: 5px;
 }
 
 .stat-card .value {
@@ -295,6 +312,7 @@ button:hover {
   grid-area: time-s;
   align-self: flex-end;
   color: #b6bfe6;
+  font-size: 14px;
 }
 
 .stat-card .nxt {
@@ -408,6 +426,17 @@ thead th {
   border-radius: 7px;
 }
 
+.sent .name {
+  position: relative;
+  left: 19px;
+}
+
+.received .name::before, .sent .name::after {
+  content: '';
+  border: 10px solid transparent;
+  position: relative;
+}
+
 .sent, .received {
   display: flex;
   margin-bottom: 20px;
@@ -419,18 +448,28 @@ thead th {
 
 .sent .msg {
   background-color: #eff0f4;
+  text-align: end;
+}
+
+.sent .name::after {
+  border-top: 10px solid #eff0f4;
 }
 
 .received .msg {
   background-color: #e1e4f7;
 }
 
+.received .name::before {
+  border-top: 10px solid #e1e4f7;
+  margin-left: -20px;
+}
+
 .sent .img {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .received .img {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .chat-box img {
@@ -452,7 +491,7 @@ thead th {
 
 .chat-box .message {
   color: #343bc0;
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 5px;
 }
 
@@ -503,6 +542,14 @@ thead th {
 }
 
 /* Ribbon design */
+.ribbon {
+  height: 0;
+  width: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid #6270d1;
+}
+
 .ribbon-green {
   background-color: #28a595;
 }
