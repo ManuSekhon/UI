@@ -18,7 +18,7 @@ const showSidebar = () => {
 }
 
 // Toggle sidebar by screen change (883px)
-window.matchMedia("(max-width: 900px)").addListener((event) => {
+window.matchMedia("(max-width: 916px)").addListener((event) => {
     if (event.matches) hideSidebar();
     else showSidebar();
 });
