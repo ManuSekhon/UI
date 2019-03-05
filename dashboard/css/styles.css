@@ -29,6 +29,7 @@ button:hover {
   width: 248px;
   background-color: #343549;
   flex-shrink: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .sidebar #logo {
@@ -599,12 +600,5 @@ thead th {
 @media screen and (max-width: 1010px) {
   .main-content {
     padding: 0 2% 0 2%;
-  }
-}
-
-@media screen and (max-width: 883px) {
-  .sidebar {
-    visibility: hidden;
-    width: 0;
   }
 }
