@@ -1,0 +1,151 @@
+.container-fluid {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+.container-fluid nav {
+  padding-left: 12%;
+  padding-right: 12%;
+  font-size: 15px;
+}
+.container-fluid .tagline {
+  padding-left: 12%;
+  padding-right: 12%;
+  background-color: #017bff;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  color: white;
+}
+.container-fluid .tagline p {
+  color: #7eb7fc;
+}
+.container-fluid .intro {
+  padding-left: 12%;
+  padding-right: 12%;
+  margin: 0;
+}
+.container-fluid .intro .card {
+  border: none;
+}
+.container-fluid .intro .card .card-header {
+  background: none;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.container-fluid .intro .card .card-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container-fluid .intro .what-we-do {
+  flex-basis: 35%;
+  margin-left: 0;
+}
+.container-fluid .intro .contact {
+  margin-right: 0;
+}
+.container-fluid .images {
+  padding-left: 12%;
+  padding-right: 12%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 330px);
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.container-fluid .images section {
+  display: flex;
+  height: 200px;
+  background-color: #cccccc;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+  font-size: 35px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.container-fluid .picture {
+  padding-top: 6rem;
+  padding-bottom: 9rem;
+  color: white;
+  margin-bottom: 30px;
+  z-index: 0;
+  border: none;
+}
+.container-fluid .picture::before {
+  content: "";
+  background: url("../img/image.jpg") 0 0/cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.container-fluid .picture .card-title {
+  font-size: 35px;
+  font-weight: bold;
+}
+.container-fluid .picture .card-text {
+  font-size: 20px;
+}
+.container-fluid .pricing {
+  padding-left: 26%;
+  padding-right: 26%;
+  background: none;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+.container-fluid .pricing h1 {
+  font-size: 50px;
+}
+.container-fluid .price-plans {
+  padding-left: 17%;
+  padding-right: 17%;
+  margin: 0;
+  text-align: center;
+}
+.container-fluid .price-plans .card-header {
+  font-size: 25px;
+}
+.container-fluid .price-plans .card-title {
+  margin: 0;
+  color: #636c74;
+  font-size: 30px;
+}
+.container-fluid .price-plans .card-title span {
+  color: black;
+  font-size: 35px;
+}
+.container-fluid .price-plans .card-text {
+  margin-bottom: 0;
+}
+.container-fluid .h-line {
+  margin: 10% 17% 40px 17%;
+  background-color: rgba(0, 0, 0, 0.125);
+  height: 1px;
+}
+.container-fluid .footer {
+  padding-left: 17%;
+  padding-right: 17%;
+  margin: 0;
+}
+.container-fluid .footer .col {
+  padding: 0;
+}
+.container-fluid .footer .col p {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.container-fluid .footer .logo img {
+  background-color: #50357a;
+  border-radius: 5px;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 5px;
+}
+.container-fluid .footer .logo p {
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=index.css.map */
