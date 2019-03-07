@@ -7,74 +7,145 @@
   padding-right: $value;
 }
 
+@mixin insert-padding($padding) {
+  nav, .tagline, .intro, .images, .picture {
+    @include pad-content($padding);
+  }
+  .pricing {
+    @include pad-content($padding + 14%);
+  }
+  .price-plans, .footer {
+    @include pad-content($padding + 5%);
+  }
+  .h-line {
+    $val: $padding + 5%;
+    margin: 10% $val 40px $val;
+  }
+}
+
 .container-fluid {
   padding: 0;
   margin: 0 0 30px 0;
 
+  // Insert padding for small screens
+  @include insert-padding($content-small);
+
   nav {
-    @include pad-content($content-padding);
     font-size: 15px;
+
+    li {
+      @include breakpoint(smallScreen) {
+        text-align: center;
+      }
+    }
   }
 
   .tagline {
-    @include pad-content($content-padding);
-    background-color: #017bff;
+    background-color: $tagline-color;
     padding-top: 7%;
     padding-bottom: 7%;
     color: white;
 
     p {
       color: #7eb7fc;
+      text-align: justify;
     }
+
+    h1 {
+      font-size: 40px;
+    } 
   }
 
   .intro {
-    @include pad-content($content-padding);
     margin: 0;
+    text-align: center;
 
     .card {
       border: none;
 
       .card-header {
         background: none;
-        padding-left: 0;
-        padding-right: 0;
+        @include pad-content(0);
         border-bottom: 1px solid rgba(0, 0, 0, .125);
       }
 
       .card-body {
-        padding-left: 0;
-        padding-right: 0;
+        @include pad-content(0);
       }
     }
 
     .what-we-do {
       flex-basis: 35%;
       margin-left: 0;
+      text-align: justify;
+
+      .card-header {
+        text-align: center;
+        
+        @include breakpoint(middleScreen) {
+          text-align: left;
+        }
+      }
+
+      button {
+        font-size: 20px;
+        width: 100%;
+
+        i {
+          padding-left: 10px;
+        }
+
+        @include breakpoint(middleScreen) {
+          width: auto;
+        }
+      }
     }
 
-    .contact {
+    .contact-us {
       margin-right: 0;
+
+      @include breakpoint(middleScreen) {
+        text-align: left;
+      }
+
+      p {
+        margin-bottom: 2px;
+      }
+
+      .card-title {
+        font-weight: bold;
+      }
+
+      .address {
+        margin-bottom: 20px;
+      }
     }
   }
 
   .images {
-    @include pad-content($content-padding);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 330px);
-    justify-content: space-between;
     margin-top: 30px;
 
-    section {
-      display: flex;
+    .card-deck {
+      justify-content: space-around;
+    }
+
+    .card {
       height: 200px;
       background-color: #cccccc;
       align-items: center;
       justify-content: center;
       color: #999999;
       font-size: 35px;
-      border-radius: 5px;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
+      max-width: 400px;
+      border: none;
+
+      @include breakpoint(middleScreen) {
+        flex-basis: 40%;
+      }
+      @include breakpoint(largeScreen) {
+        flex-basis: 0;
+      }
     }
   }
 
@@ -106,7 +177,6 @@
   }
 
   .pricing {
-    @include pad-content($content-padding + 14%);
     background: none;
     text-align: center;
     margin-bottom: 0;
@@ -118,9 +188,28 @@
   }
 
   .price-plans {
-    @include pad-content($content-padding + 5%);
     margin: 0;
     text-align: center;
+    justify-content: space-around;
+
+    .card {
+      margin-bottom: 30px;
+      max-width: 400px;
+
+      .card-footer {
+        background: none;
+        border: none;
+      }
+
+      @include breakpoint(middleScreen) {
+        flex-basis: 40%;
+      }
+      @include breakpoint(largeScreen) {
+        flex-basis: 0;
+      }
+    }
+
+    
 
     .card-header {
       font-size: 25px;
@@ -143,18 +232,23 @@
   }
 
   .h-line {
-    $val: $content-padding + 5%;
-    margin: 10% $val 40px $val;
     background-color: rgba(0, 0, 0, .125);
     height: 1px;
   }
 
   .footer {
-    @include pad-content($content-padding + 5%);
     margin: 0;
 
     .col {
       padding: 0;
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+
+      @include breakpoint(middleScreen) {
+        text-align: left;
+        flex-basis: 0;
+      }
 
       p {
         margin: 0;
@@ -176,5 +270,17 @@
         font-size: 13px;
       }
     }
+  }
+
+  @include breakpoint(smallScreen) {
+    @include insert-padding($content-padding);
+  }
+
+  @include breakpoint(middleScreen) {
+    @include insert-padding($content-small);
+  }
+
+  @include breakpoint(xLarge) {
+    @include insert-padding($content-padding);
   }
 }

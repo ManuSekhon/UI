@@ -2,14 +2,30 @@
   padding: 0;
   margin: 0 0 30px 0;
 }
+.container-fluid nav, .container-fluid .tagline, .container-fluid .intro, .container-fluid .images, .container-fluid .picture {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.container-fluid .pricing {
+  padding-left: 19%;
+  padding-right: 19%;
+}
+.container-fluid .price-plans, .container-fluid .footer {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.container-fluid .h-line {
+  margin: 10% 10% 40px 10%;
+}
 .container-fluid nav {
-  padding-left: 12%;
-  padding-right: 12%;
   font-size: 15px;
 }
+@media screen and (min-width: 481px) {
+  .container-fluid nav li {
+    text-align: center;
+  }
+}
 .container-fluid .tagline {
-  padding-left: 12%;
-  padding-right: 12%;
   background-color: #017bff;
   padding-top: 7%;
   padding-bottom: 7%;
@@ -17,11 +33,14 @@
 }
 .container-fluid .tagline p {
   color: #7eb7fc;
+  text-align: justify;
+}
+.container-fluid .tagline h1 {
+  font-size: 40px;
 }
 .container-fluid .intro {
-  padding-left: 12%;
-  padding-right: 12%;
   margin: 0;
+  text-align: center;
 }
 .container-fluid .intro .card {
   border: none;
@@ -39,28 +58,71 @@
 .container-fluid .intro .what-we-do {
   flex-basis: 35%;
   margin-left: 0;
+  text-align: justify;
 }
-.container-fluid .intro .contact {
+.container-fluid .intro .what-we-do .card-header {
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  .container-fluid .intro .what-we-do .card-header {
+    text-align: left;
+  }
+}
+.container-fluid .intro .what-we-do button {
+  font-size: 20px;
+  width: 100%;
+}
+.container-fluid .intro .what-we-do button i {
+  padding-left: 10px;
+}
+@media screen and (min-width: 576px) {
+  .container-fluid .intro .what-we-do button {
+    width: auto;
+  }
+}
+.container-fluid .intro .contact-us {
   margin-right: 0;
 }
+@media screen and (min-width: 576px) {
+  .container-fluid .intro .contact-us {
+    text-align: left;
+  }
+}
+.container-fluid .intro .contact-us p {
+  margin-bottom: 2px;
+}
+.container-fluid .intro .contact-us .card-title {
+  font-weight: bold;
+}
+.container-fluid .intro .contact-us .address {
+  margin-bottom: 20px;
+}
 .container-fluid .images {
-  padding-left: 12%;
-  padding-right: 12%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 330px);
-  justify-content: space-between;
   margin-top: 30px;
 }
-.container-fluid .images section {
-  display: flex;
+.container-fluid .images .card-deck {
+  justify-content: space-around;
+}
+.container-fluid .images .card {
   height: 200px;
   background-color: #cccccc;
   align-items: center;
   justify-content: center;
   color: #999999;
   font-size: 35px;
-  border-radius: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  max-width: 400px;
+  border: none;
+}
+@media screen and (min-width: 576px) {
+  .container-fluid .images .card {
+    flex-basis: 40%;
+  }
+}
+@media screen and (min-width: 1033px) {
+  .container-fluid .images .card {
+    flex-basis: 0;
+  }
 }
 .container-fluid .picture {
   padding-top: 6rem;
@@ -88,8 +150,6 @@
   font-size: 20px;
 }
 .container-fluid .pricing {
-  padding-left: 26%;
-  padding-right: 26%;
   background: none;
   text-align: center;
   margin-bottom: 0;
@@ -99,10 +159,27 @@
   font-size: 50px;
 }
 .container-fluid .price-plans {
-  padding-left: 17%;
-  padding-right: 17%;
   margin: 0;
   text-align: center;
+  justify-content: space-around;
+}
+.container-fluid .price-plans .card {
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+.container-fluid .price-plans .card .card-footer {
+  background: none;
+  border: none;
+}
+@media screen and (min-width: 576px) {
+  .container-fluid .price-plans .card {
+    flex-basis: 40%;
+  }
+}
+@media screen and (min-width: 1033px) {
+  .container-fluid .price-plans .card {
+    flex-basis: 0;
+  }
 }
 .container-fluid .price-plans .card-header {
   font-size: 25px;
@@ -120,17 +197,23 @@
   margin-bottom: 0;
 }
 .container-fluid .h-line {
-  margin: 10% 17% 40px 17%;
   background-color: rgba(0, 0, 0, 0.125);
   height: 1px;
 }
 .container-fluid .footer {
-  padding-left: 17%;
-  padding-right: 17%;
   margin: 0;
 }
 .container-fluid .footer .col {
   padding: 0;
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 576px) {
+  .container-fluid .footer .col {
+    text-align: left;
+    flex-basis: 0;
+  }
 }
 .container-fluid .footer .col p {
   margin: 0;
@@ -146,6 +229,57 @@
 }
 .container-fluid .footer .logo p {
   font-size: 13px;
+}
+@media screen and (min-width: 481px) {
+  .container-fluid nav, .container-fluid .tagline, .container-fluid .intro, .container-fluid .images, .container-fluid .picture {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  .container-fluid .pricing {
+    padding-left: 26%;
+    padding-right: 26%;
+  }
+  .container-fluid .price-plans, .container-fluid .footer {
+    padding-left: 17%;
+    padding-right: 17%;
+  }
+  .container-fluid .h-line {
+    margin: 10% 17% 40px 17%;
+  }
+}
+@media screen and (min-width: 576px) {
+  .container-fluid nav, .container-fluid .tagline, .container-fluid .intro, .container-fluid .images, .container-fluid .picture {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .container-fluid .pricing {
+    padding-left: 19%;
+    padding-right: 19%;
+  }
+  .container-fluid .price-plans, .container-fluid .footer {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .container-fluid .h-line {
+    margin: 10% 10% 40px 10%;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .container-fluid nav, .container-fluid .tagline, .container-fluid .intro, .container-fluid .images, .container-fluid .picture {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  .container-fluid .pricing {
+    padding-left: 26%;
+    padding-right: 26%;
+  }
+  .container-fluid .price-plans, .container-fluid .footer {
+    padding-left: 17%;
+    padding-right: 17%;
+  }
+  .container-fluid .h-line {
+    margin: 10% 17% 40px 17%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
